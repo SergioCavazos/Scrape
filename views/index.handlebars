@@ -1,0 +1,18 @@
+<a href="/">Home</a>
+<a href="/savedarticles">Saved Articles</a>
+<a href="/scrape">Scrape New Articles</a>
+<br>
+
+<ul>
+    {{#each articles}}
+    <li>
+        <p>
+            <strong>{{this.title}}</strong>
+            <p><i>{{this.summary}}</i></p>
+
+            <button data-articleid="{{this._id}}" class="savearticle">Save Article</button>
+        </p>
+    </li>
+    {{/each}}
+</ul>
+<script src="/app.js"></script>

@@ -1,0 +1,20 @@
+<a href="/">Home</a>
+<a href="/savedarticles">Saved Articles</a>
+
+<br>
+<h2> These are your related notes</h2>
+<hr>
+<button data-articleid="{{this.articlerelatednote}}" id="addnote">Add a Note</button>
+<br>
+<ul>
+    {{#each notes}}
+    <li>
+        <p>
+            <strong>{{this.title}}</strong>
+            <p><i>{{this.body}}</i></p>
+            <button data-noteid="{{this._id}}" class="deletenote">Delete Note</button>
+        </p>
+    </li>
+    {{/each}}
+</ul>
+<script src="/app.js"></script>
